@@ -52,7 +52,7 @@ nested = presenter.nested()
 matrix = presenter.matrix(nested)
 
 """
-Output (like folders in directory):
+Output (like folders and files in directory):
 
 {
     'A': {

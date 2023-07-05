@@ -38,7 +38,7 @@ data = [
 keys = ["road", "client", "station"]
 margins = {
     "wagon": "count",
-    "revenue': "sum",
+    "revenue": "sum",
     "days": "mean"
 }
 

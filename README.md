@@ -48,6 +48,9 @@ presenter = Presenter(data=data, keys=keys, values=margins)
 # Result data, nested view
 nested = presenter.nested()
 
+# Result data, tabular view
+matrix = presenter.matrix(nested)
+
 """
 Output (like folders in directory):
 
@@ -126,12 +129,8 @@ Output (like folders in directory):
     'revenue': 630,
     'wagon': 11
 }
-"""
 
-# Result data, tabular view
-matrix = presenter.matrix(nested)
 
-"""
 Output (all arrays have the same length):
 
 ['D', 'C4', 'st3', 1, 70, [5]]

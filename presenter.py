@@ -100,33 +100,3 @@ class Presenter:
                         new_path.insert(last_str_index + 1, None)
 
                 yield new_path
-
-
-if __name__ == '__main__':
-    keys = ['road', 'client', 'station']
-    margins = {
-        'wagon': 'count',
-        'revenue': 'sum',
-    }
-
-    data = [
-        {'wagon': 1, 'road': 'A', 'client': "C1", 'revenue': 10, 'station': 'st1'},
-        {'wagon': 1, 'road': 'B', 'client': "C1", 'revenue': 20, 'station': 'st1'},
-        {'wagon': 2, 'road': 'C', 'client': "C2", 'revenue': 30, 'station': 'st2'},
-        {'wagon': 2, 'road': 'A', 'client': "C3", 'revenue': 40, 'station': 'st2'},
-        {'wagon': 3, 'road': 'C', 'client': "C4", 'revenue': 50, 'station': 'st4'},
-        {'wagon': 4, 'road': 'B', 'client': "C4", 'revenue': 60, 'station': 'st5'},
-        {'wagon': 4, 'road': 'D', 'client': "C4", 'revenue': 70, 'station': 'st3'},
-        {'wagon': 4, 'road': 'A', 'client': "C2", 'revenue': 80, 'station': 'st3'},
-        {'wagon': 5, 'road': 'A', 'client': "C1", 'revenue': 90, 'station': 'st2'},
-        {'wagon': 6, 'road': 'A', 'client': "C1", 'revenue': 95, 'station': 'st4'},
-    ]
-
-    p = Presenter(data, keys, margins)
-    nested = p.nested()
-    p.print(nested)
-
-    matrix = p.matrix(nested)
-    for row in matrix:
-        print(row)
-

@@ -11,7 +11,7 @@ class Presenter:
         self.columns_length = len(self.columns)
         self.pp = pprint.PrettyPrinter()
 
-    def _down_went(self, d: dict, path: list[str]) -> dict:
+    def _down_went(self, d: dict, path: list[str]) -> Iterable[dict]:
         local_d = d
 
         for idx, p in enumerate(path):
